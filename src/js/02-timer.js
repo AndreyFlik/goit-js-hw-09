@@ -5,6 +5,11 @@ const element = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('button[data-start]');
 btnStart.setAttribute('disabled', true);
 
+const dataDays = document.querySelector('.value[data-days]');
+const dataHours = document.querySelector('.value[data-hours]');
+const dataMinutes = document.querySelector('.value[data-minutes]');
+const dataSeconds = document.querySelector('.value[data-seconds]');
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -20,7 +25,6 @@ const options = {
     console.log(selectedDates[0]);
   },
 };
-
 flatpickr(element, options);
 
 function convertMs(ms) {
